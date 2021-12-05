@@ -1,0 +1,35 @@
+body{
+    background-color:#e4e6d9;
+}
+p{
+	font-family:Helvetica;
+	color:#253528;
+}
+h5{
+    font-family:Helvetica;
+	color:#49654e;
+}
+h6{
+    font-family:Helvetica;
+    color:#49654e;
+}
+.modal-body{
+    font-family:Helvetica;
+	color:#253528;
+}
+a{
+    font-family:Helvetica;
+	color:#253528;
+    text-decoration:none;
+}
+a:hover {
+	color:#ecede8;
+}
+.navbar-toggler {
+        display: none; 
+}
+pre{
+    font-family:Helvetica;
+    font-size:medium;
+    color:#253528;
+}
