@@ -39,7 +39,7 @@
             </li>
 
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="../Register/index.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
                 aria-expanded="false">Services Offered</a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButto1">
                 <li><a class="dropdown-item" href="../Services/index.html">
@@ -119,21 +119,22 @@
     <!-- MAIN PAGE CONTENT BELOW HERE -->
     <div>
       <!-- registration instructions -->
-    
-      <h5 id="messagetext"> Thank you for bringing your pet to us. Please complete the form
-        before your first visit as it saves time and gives us valuable information about your pet so we can provide the
-        best care.</h5>
-    
+    </br>
+        <h3 id="messagetext"></h3>
       <!-- clients contact information -->
     
-      <div id="formPet" class="col-12" style="visibility:show">
+      <div id="formPet"  style="visibility:show" class="col-12" >
+        <h5> Thank you for bringing your pet to us. Please complete the form
+          before your first visit as it saves time and gives us valuable information about your pet so we can provide the
+          best care.</h5>
+        </br>
         </br><h3>How will we get in touch with you?</h3>
-       <form onsubmit="return message()">
+       <form>
           <div class="row">
             <div class="col">
-              <label class="form-floating col-form-label-lg">Tell us your first name.</label>
-              <input type="text" id="namePO" class="form-control" placeholder="First name">
-            </div>
+              <label for="namePO" class="form-floating col-form-label-lg">Tell us your first name.</label>
+              <input type="text" id="namePO" required pattern="[A-Za-z]+" class="form-control" placeholder="First name (required)">
+             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Your surname.</label>
               <input type="text" id="name_last" class="form-control" placeholder="Last name">
@@ -141,22 +142,23 @@
           </div></br>
           <div class="row">
             <div class="col">
-              <label class="form-floating col-form-label-lg">Email address</label>
-              <input type="email" id="emailPO" class="form-control" placeholder="name@example.com">
+              <label for="emailPOVal" class="form-floating col-form-label-lg">Email address</label>
+              <input type="email" id="emailPO"  name="email" required class="form-control" placeholder="name@example.com (required)" multiple>
+              <small id="emailvalid" class="form-text text-muted invalid-feedback">Your email must be a valid email</small>
             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Contact Number</label>
-              <input type="phone" id="phone" class="form-control" placeholder="contact number">
+              <input type=tel" id="tel" name="tel" class="form-control" placeholder="contact number">
             </div>
           </div></br>
           <div class="row">
             <div class="col">
               <label class="form-floating col-form-label-lg">Address</label>
-              <input type="text" id="address" class="form-control" placeholder="address line 1">
+              <input type="text" id="address0" class="form-control" placeholder="address line 1">
             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Address</label>
-              <input type="text" id="address" class="form-control" placeholder="address line 2">
+              <input type="text" id="address1" class="form-control" placeholder="address line 2">
             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Town/City</label>
@@ -170,7 +172,7 @@
             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Eir Code</label>
-              <input type="text" id="eirCode" class="form-control" placeholder="eir code">
+              <input type="text" id="eirCode"  class="form-control" placeholder="eir code">
             </div>
             <div class="col">
             </div>
@@ -181,11 +183,11 @@
             <div class="row">
               <div class="col">
                 <label class="form-floating col-form-label-lg">Name</label>
-                <input type="text" id="petName" class="form-control" placeholder="your pets name">
+                <input type="text" id="petName" required class="form-control" placeholder="your pets name (required)">
               </div>
               <div class="col">
                 <label for="petTypeList" class="form-floating col-form-label-lg">What species is your pet?</label>
-                <input class="form-control" list="petTypeOptions" id="petTypeList" placeholder="select their species...">
+                <input class="form-control" list="petTypeOptions"  id="petTypeList" placeholder="species">
                 <datalist id="petTypeOptions">
                   <option value="Cat">
                   <option value="Dog">
@@ -241,14 +243,14 @@
             <label class="form-floating col-form-label-lg">Your Message</label>
             <textarea class="form-control" rows="3"
               placeholder="If you have any questions, requests of other information you feel we should know, you can add it here."></textarea>
-          </div>
-          <p> Email or Print it off and bring it to your appointment.</p>
-          <div>
-            <button class="btn btn-success" type="submit" value="submit">Submit form</button>
+          </div></br>
+           <div>
+            <button onsubmit="message()" id="submitbtn" class="btn btn-success" type="submit" value="Submit">Submit Form</button>
           </div></br>
         </form>
+        <h3> Email or Print it off and bring it to your appointment.</h3>
      </div>
-         
+    
       <!-- MAIN PAGE CONTENT ABOVE HERE -->
     </div>
 
@@ -318,6 +320,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"></script>
-</body>
+
+    </body>
 
 </html>

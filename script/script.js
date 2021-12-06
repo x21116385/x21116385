@@ -2,21 +2,26 @@
 function securityCheck(){
 	var pass=prompt("My mexican friend?");
 	if (pass=="amigo"){
-		grantAccess();
-	}
+		alert("Access granted. The client site will open in a new window.")
+    window.open('https://www.w3schools.com', '_blank');
+    	}
 	else{
-		alert("You have entered the worng password");
-	}
-}
-function grantAccess(){
-	alert("Access granted amigo!")
+		alert("You have entered the wrong password");
+	    }
 }
 
 function message(){
-	var userName = document.getElementById("namePO").value;
-	var userEmail = document.getElementById("emailPO").value;
-	var userPet = document.getElementById("petName").value;
-	document.getElementById("messagetext").innerHTML = (userName+", thank you for your message. We will be in touch via "+userEmail+" shortly with a response. we look forward to meeting you and "+userPet);
-	document.getElementById("formPet").style.visibility = "hidden";
+	alert("Your form has been sent");
+}
+
+function message(){
+	document.getElementById("formPet" ).style.visibility = "hidden"; 
+	let userName = document.getElementById("namePO").value;
+	let userEmail = document.getElementById("emailPO").value;
+    let userPet = document.getElementById("petName").value;
+	document.getElementById("messagetext").innerHTML = userName+", thank you for contacting us.  We will be in touch via "+userEmail+" shortly with a response. We look forward to meeting you and "+userPet+" soon.";
+	document.body.scrollTop =document.documentElement.scrollTop = 0;
+    return false; 
 
 }
+
