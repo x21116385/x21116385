@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -42,28 +42,21 @@
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle"  href="/Services/index.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Services Offered</a>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButto1"> 
-                <li><a class="dropdown-item" href="../Services/index.html"><p>Health & Wellness</p></a></li>
-                <li><a class="dropdown-item" href="../Services/index.html"><p>Vaccinations, Scans & Tests</p></a></li>
-                <li><a class="dropdown-item" href="../Services/index.html"><p>Pet Care Services</p></a></li>
-                <li><a class="dropdown-item" href="../Services/index.html"><p>Pets for Adoption</p></a></li>                      
+                <li><a class="dropdown-item" href="../Services/index.html#health"><p>Health & Wellness</p></a></li>
+                <li><a class="dropdown-item" href="../Services/index.html#vacc"><p>Vaccinations</p></a></li>
+                <li><a class="dropdown-item" href="../Services/index.html#petcare"><p>Pet Care Services</p></a></li>                          
               </ul>
             </div> 
 
 
             <li class="nav-item">
-              <a class="nav-link" href="../About_Us/index.html#Petheros">
-                <p>Gallery</p>
-              </a>
+              <a class="nav-link" href="../Gallery/index.html"><p>Gallery</p></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link"" href=" ../Register/index.html">
-                <p>Register</p>
-              </a>
+              <a class="nav-link"" href=" ../Register/index.html"><p>Register</p></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../About_Us/index.html">
-                <p>About Us</p>
-              </a>
+              <a class="nav-link" href="../About_Us/index.html"><p>About Us</p></a>
             <li class="nav-item">
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -116,9 +109,9 @@
       <!-- clients contact information -->
     
       <div id="formPet"  style="visibility:show" class="col-12" >
-        <h5> Thank you for bringing your pet to us. Please complete the form
+        <h3> Thank you for bringing your pet to us. Please complete the form
           before your first visit as it saves time and gives us valuable information about your pet so we can provide the
-          best care.</h5>
+          best care.</h3>
         </br>
         </br><h3>How will we get in touch with you?</h3>
        <form>
@@ -136,7 +129,6 @@
             <div class="col">
               <label for="emailPOVal" class="form-floating col-form-label-lg">Email address</label>
               <input type="email" id="emailPO"  name="email" required class="form-control" placeholder="name@example.com (required)" multiple>
-              <small id="emailvalid" class="form-text text-muted invalid-feedback">Your email must be a valid email</small>
             </div>
             <div class="col">
               <label class="form-floating col-form-label-lg">Contact Number</label>
@@ -237,10 +229,12 @@
               placeholder="If you have any questions, requests of other information you feel we should know, you can add it here."></textarea>
           </div></br>
            <div>
-            <button onsubmit="message()" id="submitbtn" class="btn btn-success" type="submit" value="Submit">Submit Form</button>
+            <h3> Click Submit to email the form to us or click Print to print it off and bring it with you on your first visit.</h3></br>
+            <button id="submitbtn" class="btn btn-success" type="submit" value="Submit">Submit Form</button>
+            <button class="btn btn-success" onclick="window.print()">Print this form.</button>
           </div></br>
         </form>
-        <h3> Email or Print it off and bring it to your appointment.</h3>
+        
      </div>
     
       <!-- MAIN PAGE CONTENT ABOVE HERE -->
