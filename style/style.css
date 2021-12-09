@@ -5,9 +5,28 @@ p{
 	font-family:Helvetica;
 	color:#253528;
 }
-h5{
+h1{
     font-family:Helvetica;
 	color:#49654e;
+    margin-top: 1%;
+}
+h2{
+    font-family:Helvetica;
+	color:#49654e;
+    margin-top: 1%;
+}
+h3{
+    font-family:Helvetica;
+	color:#49654e;
+    margin-top: 1%;
+}
+h4{
+    font-family:Helvetica;
+	color:#49654e;
+}
+h5{
+    font-family:Helvetica;
+    color:#49654e;
 }
 h6{
     font-family:Helvetica;

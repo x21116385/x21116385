@@ -10,7 +10,8 @@
         <link href="../style/style.css" rel="stylesheet">
         <title>Group O Vets - Get to know us</title>
         <link rel="shortcut icon" type="image" href="../images/cat.webp">
-        <script src="../script/script.js" defer></script>
+         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+         <script src="../script/script.js" ></script>
     </head>
     <body >
         <!-- NAVIGATION BAR CONTAINER--> 
@@ -103,7 +104,7 @@
             <img src="../images/shauna_vet.jpg" class="card-img-top" class="img-fluid" alt="female" >
             <div class="card-body">
               <h3 class="card-title">Shauna</h3>
-              <p class="card-text">University of Edinburgh graduate and has prsticed in the UK, Galway and Dublin. She is an all-round animal lover from horses to dogs. Shauna’s speciality is soft tissue surgery.</p>
+              <p class="card-text">University of Edinburgh graduate and has worked in the UK, Galway and Dublin. She is an all-round animal lover from horses to dogs. Shauna’s speciality is soft tissue surgery.</p>
             </div>
           </div>
         </div>
@@ -145,7 +146,7 @@
         <img src="../images/Puppyclub.jpg" class="card-img-top" alt="puppy in grass">
         <div class="card-body">
           <h3 class="card-title"id="Petclub">Dog & Puppy Club</h3>
-          <h4 class="card-text">Sunday 19-December: Christmas Dog and Puppy meet up 9:30am, People's Park</h4>
+          <h4 class="card-text">Sunday 1 9December: Christmas Dog and Puppy meet up 9:30am, People's Park</h4>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">At Group O Vets we know that getting a puppy is an exciting time for you and your family – but we also know that the help, guidance and support that you get during puppy’s first year is vital to help you raise a happy, healthy puppy that understands what you want him to do, and can follow your instructions in all social settings.</li>
@@ -153,10 +154,20 @@
           <li class="list-group-item">Join the Group O Vets Dog and  Puppy Club today and get exclusive access to discounts with partner retailers, care advice and step-by-step guidance through your puppy’s first year. You can join at any time, before or after you bring your puppy home. Sign-up today, submit your email below.</li>
         </ul>
         <div class="card-body">
-          <form><label for="emailPOVal" class="form-floating col-form-label-lg">Join the Dog and Puppy Club</label>
+          <form>
+
+          <h3 for="emailPOVal" class="form-floating col-form-label-lg">Join the Dog and Puppy Club</h3>
           <input type="email" id="emailPO"  name="email" required class="form-control" placeholder="name@example.com, another@example.com" multiple>
+        </br><h6></br></h6>
           <button id="submitbtn" class="btn btn-success" type="submit" value="Submit">Join</button></form>
         </div>
+          <script>
+          $( ":input" ).click(function() {
+            $( "h6" ).text( "Good call! New dog and human friends are waiting to meet you." ).show().fadeOut( 6000 );
+          });
+          </script>
+
+
       </div>
     </div>
     <div class="col-md-6">
