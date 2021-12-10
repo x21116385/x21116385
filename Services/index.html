@@ -11,6 +11,7 @@
         <title>Group O Vets - Services Offered.</title>
         <link rel="shortcut icon" type="image" href="../images/cat.webp">
         <script src="../script/script.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body >
         <!-- NAVIGATION BAR CONTAINER--> 
@@ -85,7 +86,7 @@
             </nav>
       </div>
         <!-- HOME PAGE MAIN CONTAINER -->
-  <div class="container-md">
+      <div class="container-md">
           <!-- MAIN PAGE CONTENT BELOW HERE -->
  
                 <!-- start of page with button that drops down to servives -->
@@ -249,8 +250,23 @@
           <div class="alert alert-success middle" role="alert">
             Vaccinations are a lifesaver for pets. Give them the warmth of love with proper medical care. At our clinic we offer affordable cat and dog vaccinations to ensure your pet is protected from deadly infections. Contact us over phone or email for discount vaccination bundles. 
           </div>
+          </div>
         </div>
+        <!-- JQuery button -->
+        <div class="row">
+          <div class="col-12 middle">
+            <button class="btn btn-outline-dark">Click for tips to prepare your pet for vaccinations</button>
+            <br/>
+            <br/>
+            <p style="display: none">Be a calm example, transport with care, take advantage of treats and utilise synthetic pheromones.</p>
+            <script>
+              $("button").click(function(){
+                $("p").show("slow");
+              });
+            </script>
+          </div>
         </div>
+
           
         <!-- SERVICES-->
         <div class="container1">
@@ -411,10 +427,8 @@
         </div>
       </div>
       <br/>
-          <!-- MAIN PAGE CONTENT ABOVE HERE -->          
-  </div>	
-
-    
+      <!-- MAIN PAGE CONTENT ABOVE HERE -->          
+      </div>	
         <!-- FOOTER CONTAINER -->    
         <div class="container-md" style="background-color:#c0cfb2;">
           <footer class="row row-cols-4 py-4 my-4 border-top">

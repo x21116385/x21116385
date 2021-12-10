@@ -158,3 +158,16 @@ pre{
     padding: 50px;
     display: none;
 }
+
+/*rating*/
+.rating {
+    width: 180px;
+}
+.rating__star {
+    cursor: pointer;
+    color:darkcyan;
+}
+.theLeft{
+    text-align:left;
+}
+

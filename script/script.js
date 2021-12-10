@@ -45,3 +45,105 @@ function writeRandomQuote(){
     var rand = Math.floor(Math.random()*quotes.length);
     alert(quotes[rand]);
 }
+
+//game cat dog mouse
+//cat=rock & dog=paper & mouse=scissors
+document.getElementById('rock').onclick = user;
+document.getElementById('paper').onclick = user;
+document.getElementById('scissors').onclick = user;
+
+function user(){
+    var userChoice = this.id;
+    console.log("User: " + userChoice)
+    var computerChoice = Math.random();
+        if (computerChoice<0.34){
+            computerChoice="rock";
+        }
+        else if(computerChoice<=0.67){
+            computerChoice = "paper";
+        }
+        else{
+            computerChoice="scissors";
+        }
+    console.log("Computer: " + computerChoice);
+    console.log(compare(userChoice, computerChoice)); 
+
+    //tie
+    function compare(choice1, choice2){
+		if (choice1===choice2){
+            alert("Your opponent chose the same option: The result is a tie! Try again?");
+        }
+        //cat
+        else if(choice1==="rock"){
+            if(choice2==="scissors"){
+                alert("Your opponent chose Mouse: You win!");
+            }
+            else{
+                alert("Your opponent chose Dog: You lose!");
+            }
+		}
+        //dog
+        else if(choice1==="paper"){
+            if(choice2==="rock"){
+                alert("Your opponent chose Cat: You win!");
+            }
+            else{
+                alert("Your opponent chose Mouse: You lose!");
+            }
+		}
+		//mouse
+		else if(choice1==="scissors"){
+            if(choice2==="rock") {
+                alert("Your opponent chose Dog: You lose!");
+            } 
+            else{
+                alert("Your opponent chose Cat: You win!");
+            }
+        }
+    }
+}
+
+//stars
+const ratingStars = [...document.getElementsByClassName("rating__star")];
+function executeRating(stars){
+    const starClassOne= "rating__star fas fa-star";
+    const starClassTwo = "rating__star far fa-star";
+    const starsLength = stars.length;
+  
+    let i;
+    stars.map((star)=>{
+    star.onclick=()=>{
+        i=stars.indexOf(star);
+        if(star.className===starClassTwo){
+            for(i;i>=0;--i) stars[i].className = starClassOne;
+            } 
+            else{
+                for(i;i<starsLength;++i) stars[i].className=starClassTwo;
+            }
+        };
+    });
+}
+executeRating(ratingStars);
+
+
+
+
+$( function() {
+    var state = true;
+    $( "#button" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect" ).animate({
+          backgroundColor: "#aa0000",
+          color: "#fff",
+          width: 500
+        }, 1000 );
+      } else {
+        $( "#effect" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+      }
+      state = !state;
+    });
+  } );
