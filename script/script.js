@@ -46,7 +46,7 @@ function writeRandomQuote(){
     alert(quotes[rand]);
 }
 
-//game cat dog mouse
+//game cat dog mouse in gallery
 //cat=rock & dog=paper & mouse=scissors
 document.getElementById('rock').onclick = user;
 document.getElementById('paper').onclick = user;
@@ -103,7 +103,7 @@ function user(){
     }
 }
 
-//stars
+//stars under game
 const ratingStars = [...document.getElementsByClassName("rating__star")];
 function executeRating(stars){
     const starClassOne= "rating__star fas fa-star";
@@ -125,25 +125,3 @@ function executeRating(stars){
 }
 executeRating(ratingStars);
 
-
-
-
-$( function() {
-    var state = true;
-    $( "#button" ).on( "click", function() {
-      if ( state ) {
-        $( "#effect" ).animate({
-          backgroundColor: "#aa0000",
-          color: "#fff",
-          width: 500
-        }, 1000 );
-      } else {
-        $( "#effect" ).animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240
-        }, 1000 );
-      }
-      state = !state;
-    });
-  } );

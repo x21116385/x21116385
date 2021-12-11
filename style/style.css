@@ -54,6 +54,7 @@ pre{
 }
 
 
+
 .center{
     margin:auto;
 }
@@ -90,7 +91,6 @@ pre{
 .middle{
     text-align:center;
 }
-
 
 /*gallery css*/
 #gallery{
@@ -170,4 +170,3 @@ pre{
 .theLeft{
     text-align:left;
 }
-
