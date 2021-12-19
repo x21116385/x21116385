@@ -125,3 +125,30 @@ function executeRating(stars){
 }
 executeRating(ratingStars);
 
+//form validation
+function validateForm() {
+    let x = document.forms["registration"]["namePO"].value;
+    if (x == "") {
+      alert("Please enter your first name on the form");
+      return false;
+    }
+    let y = document.forms["registration"] ["email"].value;
+    if (y == "") {
+      alert("email is needed to contact you, please enter an email address");
+      return false;
+    }
+    let z = document.forms["registration"] ["petName"].value;
+    if (z == "") {
+      alert("Pet's name must be entered on the form");
+      return false;
+    }
+}
+
+
+
+
+
+
+
+ 
+

@@ -13,6 +13,7 @@
         <title>Group O Vets - Home</title>
         <link rel="shortcut icon" type="image" href="images/dog.webp"alt="dog favicon">
         <script src="script/script.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     </head>
     <body >
         <!-- NAVIGATION BAR CONTAINER--> 
@@ -195,7 +196,31 @@
               <li class="list-group-item"><a href="gallery/index.html#specialmentions"><b>Poppy</b></a><p>Living life in the slow lane until surgery gave her back her bounce.</p></li>
             </ul>
             <div class="card-body">
-              <a href="gallery/index.html#specialmentions" class="card-link">Read more about our heroes</a>
+              <a href="gallery/index.html#specialmentions" class="btn btn-outline-dark">Click here to read more about our heroes</a>
+            </div>
+            <div class="card-body">
+              
+              <!-- One button for each fading command -->
+              <h5>How can you get your pet nominated for Hero of the Month?</h5>
+              <input type="button" class="btn btn-outline-success" id="btnFadeOut" value="See Less">
+              <input type="button" class="btn btn-outline-success" id="btnFadeIn" value="See More">
+              <div id="fadeMe">
+                <br/>
+                <ul>
+                  <li>Send us an email at tracey@groupovets.ie</li>
+                  <li>Send us a short paragraph on why you think your pet deserves to be nominated</li>
+                  <li>Don't forget to attach your favourite picture of them</li>
+                  <li>Open to all pet types!</li>
+                </ul>
+              </div>  
+              <script>
+                $('#btnFadeIn').click(function() {
+                  $('#fadeMe').fadeIn('slow');
+                });
+                $('#btnFadeOut').click(function() {
+                    $('#fadeMe').fadeOut();
+                });
+              </script>
             </div>
           </div>
           </div>
